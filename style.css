@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Raleway:wght@200;300;400&family=Source+Sans+Pro:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Raleway:wght@200;300;400&family=Source+Sans+Pro:wght@300;400&display=swap");
 body,
 html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
 }
 
 .sm-links a i {
@@ -16,6 +16,7 @@ html {
 }
 .navbar {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: center;
   background-color: black;
@@ -46,10 +47,7 @@ html {
   background-color: #c79d33;
 }
 .logo {
-  position: absolute;
-  /* top: 50%; */
-  right: 50%;
-  display: none;
+  /* height: 60px; */
 }
 .logo img {
   width: 50px;
@@ -75,7 +73,7 @@ html {
   /* padding: 8px; */
 }
 .brand-name {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   text-align: left;
@@ -84,20 +82,23 @@ html {
   margin-top: 50px;
   /* position: fixed; */
   width: 100%;
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   z-index: 2;
   /* color: #2c2426; */
 }
 .circles img {
-  height: 150px;
-  transform: translateX(20px);
+  width: 100%;
+  /* transform: translateX(20px); */
+}
+.brand-name h1 {
+  display: none;
 }
 .brand-name h1 span {
   display: block;
   text-align: left;
   color: #8a8a8a;
   font-size: 40px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   /* display: none; */
 }
 .image-slider {
@@ -110,7 +111,7 @@ html {
   height: auto;
   background: #1c1f1f;
   color: floralwhite;
-  margin: 50px 0;
+  /* margin: 50px 0; */
   padding: 100px;
   display: flex;
   flex-direction: column;
@@ -144,8 +145,8 @@ html {
   margin: 0 100px;
   margin-top: 150px;
   text-align: left;
-  font-family: 'Lora', serif;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.8em;
   /* width: 400px; */
 }
@@ -197,11 +198,11 @@ html {
 }
 .contacts p {
   font-size: 1.2rem;
-  font-family: 'Bree Serif', serif;
+  font-family: "Bree Serif", serif;
   font-weight: 200;
 }
 .contacts a {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #c79d33;
   text-decoration: none;
 }
@@ -274,6 +275,7 @@ form button {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 100px;
 }
 .residential img,
 .commercial img {
@@ -297,21 +299,21 @@ form button {
   text-decoration: none;
 }
 .commercial-pro {
-  margin: 50px 150px;
-  display: grid;
-  grid-template-columns: 600px 600px;
-  gap: 100px;
+  margin: 50px;
+  display: flex;
+  flex-flow: row wrap;
 }
 .container {
   position: relative;
   width: 50%;
+  margin: 40px 0;
 }
 
 .image {
   opacity: 1;
   display: block;
-  width: 600px;
-  height: 400px;
+  width: 500px;
+  height: 340px;
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
@@ -321,7 +323,7 @@ a .middle {
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
@@ -410,7 +412,7 @@ a .middle {
   justify-content: center;
   font-size: 1rem;
   font-weight: 700;
-  font-family: 'NM';
+  font-family: "NM";
   line-height: 1.3;
   letter-spacing: 0.04rem;
   -webkit-transition: all 0.4s ease-in-out;
@@ -535,7 +537,7 @@ a .middle {
 
 .footer {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-evenly;
   padding: 50px 150px;
   margin-top: 30px;
@@ -552,15 +554,15 @@ footer span {
   color: #c79d33;
 }
 .logo-1 {
-  display: flex;
+  /* display: flex; */
   text-align: left;
 }
 .col1 img {
-  width: 50px;
+  width: auto;
   height: 50px;
 }
 .name {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   color: #1c1f1f;
@@ -578,6 +580,7 @@ footer span {
 .col2 strong {
   color: #1c1f1f;
   padding: 8px;
+  padding-bottom: 50px;
 }
 .Q-links {
   list-style: none;
@@ -587,7 +590,9 @@ footer span {
 }
 .Q-links div,
 .Q-links li {
-  padding: 8px;
+  padding: 5px;
+
+  margin-top: 15px;
 }
 .Q-links li a {
   text-decoration: none;
@@ -596,6 +601,7 @@ footer span {
 }
 .link1 {
   padding: 12px;
+  padding-left: 0px;
 }
 .col3 strong {
   text-transform: uppercase;
@@ -603,6 +609,7 @@ footer span {
 }
 .col3 p {
   text-transform: capitalize;
+  margin-top: 30px;
   margin-bottom: 0;
   /* color: #c79d33; */
 }
@@ -665,6 +672,7 @@ footer span {
   .logo-1 {
     align-items: center;
     justify-content: center;
+    text-align: center;
     /* flex-direction: column; */
   }
 
@@ -912,6 +920,7 @@ footer span {
   }
   .commercial-pro {
     margin: 0;
+
     grid-template-columns: 350px;
     align-items: center;
     justify-content: center;
